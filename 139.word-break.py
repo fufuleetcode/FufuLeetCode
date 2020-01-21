@@ -60,6 +60,26 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         
         """
+        Solution-0: BF Recursion
+        """
+        # def helper(s, curr_idx) -> bool:
+                        
+        #     if curr_idx == len(s) :
+        #         return True
+            
+        #     N = len(s)
+            
+        #     for word in wordDict:
+                                
+        #         if len(word) <= N - curr_idx  and s[curr_idx:curr_idx+len(word)] in wordDict and helper(s,curr_idx+len(word)):
+        #             return True
+            
+        #     return False
+        
+        # return helper(s, 0)
+        
+
+        """
         Solution-1: Recursion with memory
         """
 
@@ -89,7 +109,32 @@ class Solution:
 
 
         """
-        Solution-2: Dynamic Programming
+        Solution-2: BFS( time out limit error)
+        """
+        
+        # queue = collections.deque([0])
+        
+        # while queue:
+            
+        #     idx = queue.popleft()
+            
+        #     # print(idx)
+            
+        #     if idx == len(s):
+        #         return True
+            
+        #     for end in range(idx, len(s) ):
+                
+        #         if s[idx:end+1] in wordDict:
+                    
+        #             queue.append(end+1)
+                
+        # return False
+
+
+
+        """
+        Solution-3: Dynamic Programming
         """
         dp = [False] * (len(s) + 1)
         dp[0] = True
@@ -99,6 +144,7 @@ class Solution:
                     if s[i:i+len(word)] == word:
                         dp[i+len(word)] = True
         return dp[-1]
+
 
 # @lc code=end
 
