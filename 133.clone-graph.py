@@ -147,7 +147,7 @@ class Solution:
                 visited[node].neighbors.append(visited[neighbor])
         return node_cp
 
-    # Solution-3: DFS with iteration and stacks
+    # Solution-3: BFS with Queue
     def cloneGraph_solution_3(self, node: 'Node') -> 'Node':
 
         if not node: return None
