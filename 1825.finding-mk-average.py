@@ -1,6 +1,7 @@
+# @lc code=start
 
 # Solution - 1 (Dont' use)
-class MKAverage:
+class Solution:
 
     def __init__(self, m: int, k: int):
         
@@ -49,7 +50,7 @@ class MKAverage:
 
 
 # Solution -2 
-class MKAverage:
+class Solution:
 
     def __init__(self, m: int, k: int):
         
@@ -87,7 +88,7 @@ class MKAverage:
 
 
 # Solution - 3
-class MKAverage:
+class Solution:
 
     def __init__(self, m: int, k: int):
         from sortedcontainers import SortedList
@@ -152,7 +153,7 @@ class MKAverage:
         return (self.total - self.left_k - self.right_k) // (self.m - 2 * self.k)
     
         
-
+# @lc code=end
 
 # Your MKAverage object will be instantiated and called as such:
 # obj = MKAverage(m, k)

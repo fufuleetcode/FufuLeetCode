@@ -1,5 +1,5 @@
-nner(self, n: int, k: int) -> int:
-        
+# @lc code=start
+class Solution
         # construct a double linked list node class
         class DoubleLinkedListNode:
             def __init__(self, val):
